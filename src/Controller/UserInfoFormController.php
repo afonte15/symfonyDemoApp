@@ -11,10 +11,10 @@ class UserInfoFormController extends AbstractController
     /**
      * @Route("/user/info/form", name="user_info_form")
      */
-    public function userInfo()
+    public function index()
     {
     	$form = $this->createForm(UserInfoType::class);
-    	
-		$this->render('');
+
+		$this->render(':user_info_form:index.html.twig');
     }
 }
